@@ -15,7 +15,10 @@ pub struct Cli {
 #[derive(StructOpt)]
 pub enum Command {
     /// Create a new hund project
-    New,
+    New {
+        /// Project's name
+        name: String,
+    },
     /// Create a new hund project in an existing directory
     Init,
     /// Install dependencies

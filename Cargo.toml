@@ -14,16 +14,17 @@ readme = 'README.md'
 repository = 'https://github.com/kilork/hund'
 
 [dependencies]
-log = '0.4'
-failure = '0.1'
+clap-verbosity-flag = '0.3'
+data-encoding = "2.1"
+dirs = "2.0"
 exitfailure = '0.5'
+failure = '0.1'
+indicatif = '0.13'
+log = '0.4'
 reqwest = '0.9'
 ring = '0.16'
 structopt = '0.3'
-indicatif = '0.13'
-clap-verbosity-flag = '0.3'
 toml = '0.5'
-data-encoding = "2.1"
 
 [dependencies.serde]
 version = '1.0'

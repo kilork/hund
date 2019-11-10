@@ -16,8 +16,11 @@ hund = "0.1"
 
 mod error;
 
+pub(crate) mod app;
 pub mod command;
 pub(crate) mod config;
+
+const SETTINGS: &str = ".hund/config";
 
 #[cfg(test)]
 mod tests {
