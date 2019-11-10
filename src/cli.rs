@@ -18,4 +18,6 @@ pub enum Command {
     New,
     /// Create a new hund project in an existing directory
     Init,
+    /// Install dependencies
+    Install,
 }

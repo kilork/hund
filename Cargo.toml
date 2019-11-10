@@ -22,6 +22,8 @@ ring = '0.16'
 structopt = '0.3'
 indicatif = '0.13'
 clap-verbosity-flag = '0.3'
+toml = '0.5'
+data-encoding = "2.1"
 
 [dependencies.serde]
 version = '1.0'
