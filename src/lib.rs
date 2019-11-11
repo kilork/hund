@@ -14,13 +14,14 @@ hund = "0.1"
 
 */
 
-mod error;
-
 pub(crate) mod app;
 pub mod command;
 pub(crate) mod config;
+pub mod error;
 
 const SETTINGS: &str = ".hund/config";
+
+pub use error::HundError;
 
 #[cfg(test)]
 mod tests {

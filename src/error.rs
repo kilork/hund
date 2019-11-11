@@ -1,7 +1,9 @@
 use failure::Fail;
 
 #[derive(Fail, Debug)]
-enum HundError {
+pub enum HundError {
     #[fail(display = "I'm hungry! Woof!")]
     Hungry,
+    #[fail(display = "Path already exists: {}", _0)]
+    PathExists(String),
 }

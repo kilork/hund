@@ -8,7 +8,7 @@ fn main() -> Result<(), ExitFailure> {
     let cli = Cli::from_args();
 
     match cli.command {
-        Command::New { name } => hund::command::new(&name),
+        Command::New { name } => hund::command::new(&name)?,
         _ => unimplemented!(),
     }
 

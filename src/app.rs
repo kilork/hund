@@ -5,11 +5,8 @@ pub(crate) struct HundApp {
 }
 
 impl HundApp {
-
     pub(crate) fn new() -> Self {
         let settings = HundSettings::load();
-        HundApp {
-            settings
-        }
+        HundApp { settings }
     }
 }
