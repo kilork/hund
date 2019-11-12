@@ -23,4 +23,6 @@ pub enum Command {
     Init,
     /// Install dependencies
     Install,
+    /// Publish
+    Publish,
 }

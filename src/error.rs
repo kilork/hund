@@ -6,4 +6,6 @@ pub enum HundError {
     Hungry,
     #[fail(display = "Path already exists: {}", _0)]
     PathExists(String),
+    #[fail(display = "Empty package name")]
+    EmptyPackageName,
 }

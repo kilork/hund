@@ -9,6 +9,7 @@ fn main() -> Result<(), ExitFailure> {
 
     match cli.command {
         Command::New { name } => hund::command::new(&name)?,
+        Command::Publish => hund::command::publish()?,
         _ => unimplemented!(),
     }
 

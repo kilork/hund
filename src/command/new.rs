@@ -3,7 +3,7 @@ use crate::config::HundConfig;
 use std::fs;
 use std::path::PathBuf;
 
-use crate::HundError;
+use crate::{HundError, HUND_TOML};
 
 pub fn new(name: &str) -> Result<(), failure::Error> {
     let _ = HundApp::new();
@@ -20,7 +20,7 @@ pub fn new(name: &str) -> Result<(), failure::Error> {
 
     let config_str = toml::to_string(&hund_config)?;
 
-    fs::write(path.join("hund.toml"), config_str)?;
+    fs::write(path.join(HUND_TOML), config_str)?;
 
     Ok(())
 }

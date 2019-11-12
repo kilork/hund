@@ -19,14 +19,8 @@ pub mod command;
 pub(crate) mod config;
 pub mod error;
 
-const SETTINGS: &str = ".hund/config";
+const HUND_SETTINGS: &str = ".hund";
+const HUND_CONFIG: &str = "config";
+const HUND_TOML: &str = "hund.toml";
 
 pub use error::HundError;
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
