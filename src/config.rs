@@ -60,7 +60,7 @@ impl HundConfig {
         }
     }
 
-    pub(crate) fn load() -> Result<Self, failure::Error> {
+    pub(crate) fn load() -> Result<Self, anyhow::Error> {
         Ok(toml::from_str(&fs::read_to_string(HUND_TOML)?)?)
     }
 }

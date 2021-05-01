@@ -1,10 +1,9 @@
 mod cli;
 
-use cli::*;
-use exitfailure::ExitFailure;
+use cli::{Cli, Command};
 use structopt::StructOpt;
 
-fn main() -> Result<(), ExitFailure> {
+fn main() -> Result<(), anyhow::Error> {
     let cli = Cli::from_args();
 
     match cli.command {

@@ -1,11 +1,11 @@
-use failure::Fail;
+use thiserror::Error;
 
-#[derive(Fail, Debug)]
+#[derive(Error, Debug)]
 pub enum HundError {
-    #[fail(display = "I'm hungry! Woof!")]
+    #[error("I'm hungry! Woof!")]
     Hungry,
-    #[fail(display = "Path already exists: {}", _0)]
+    #[error("Path already exists: {0}")]
     PathExists(String),
-    #[fail(display = "Empty package name")]
+    #[error("Empty package name")]
     EmptyPackageName,
 }

@@ -5,7 +5,7 @@ use std::path::PathBuf;
 
 use crate::{HundError, HUND_TOML};
 
-pub fn new(name: &str) -> Result<(), failure::Error> {
+pub fn new(name: &str) -> Result<(), anyhow::Error> {
     let _ = HundApp::new();
 
     let path = PathBuf::from(name);

@@ -1,11 +1,11 @@
 use crate::app::HundApp;
 use crate::config::HundConfig;
 use std::fs;
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 
 use crate::{HundError, HUND_SETTINGS, HUND_TOML};
 
-pub fn publish() -> Result<(), failure::Error> {
+pub fn publish() -> Result<(), anyhow::Error> {
     let _ = HundApp::new();
 
     let hund_config = HundConfig::load()?;
